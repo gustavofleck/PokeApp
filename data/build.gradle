@@ -15,6 +15,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "BASE_URL", "\"https://pokeapi.co/api/v2/\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -36,6 +40,13 @@ android {
 
 dependencies {
     api project(':domain')
+
+    // Room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // Koin
+    implementation "io.insert-koin:koin-core:$koin_version"
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"

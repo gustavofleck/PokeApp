@@ -10,6 +10,7 @@ buildscript {
         junit5_version = "5.7.0"
         turbine_version = "0.8.0"
         mockk_version = "1.12.5"
+        room_version = "2.4.3"
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
