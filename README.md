@@ -1,1 +1,2 @@
-# poke-app
+# PokeApp
+## API: https://pokeapi.co/
