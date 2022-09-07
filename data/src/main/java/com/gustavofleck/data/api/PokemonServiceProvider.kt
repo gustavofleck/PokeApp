@@ -14,11 +14,11 @@ object PokemonServiceProvider {
 
     private val httpClient = OkHttpClient.Builder().addInterceptor(httpInterceptor).build()
 
-    fun retrofitInstance(): Retrofit {
+    fun pokemonApiInstance(): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .client(httpClient)
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(BuildConfig.POKEMON_BASE_URL)
             .build()
     }
 }
